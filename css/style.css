@@ -74,3 +74,27 @@ footer {
     padding: 20px;
     color: #555;
 }
+
+
+/* Project Grid Layout */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.project {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 6px;
+    background: #fafafa;
+    transition: transform 0.2s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+
