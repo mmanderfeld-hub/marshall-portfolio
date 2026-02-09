@@ -15,25 +15,72 @@ body {
 
 
 /* ============================
-   Navigation Bar
+   Navigation Bar (Final)
    ============================ */
 
-nav {
-    background-color: #020617;
-    padding: 16px;
+.navbar {
+    position: relative;
+
+    background-color: #020617; /* Original dark */
+
+    padding: 16px 0;
+
     text-align: center;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-nav a {
+
+/* Center Container */
+.nav-center {
+    display: inline-flex;
+    gap: 20px;
+
+    padding: 6px 14px;
+
+    border-radius: 8px;
+}
+
+
+/* All Buttons */
+.nav-btn {
     color: #e0f2fe;
     text-decoration: none;
-    margin: 0 18px;
+
     font-weight: bold;
     font-size: 1.05em;
+
+    padding: 6px 16px;
+
+    border: 1px solid #1d4ed8; /* Thin blue outline */
+    border-radius: 6px;
+
+    background: transparent;
+
+    transition: all 0.2s ease;
 }
 
-nav a:hover {
-    text-decoration: underline;
+
+/* Hover */
+.nav-btn:hover {
+    background: rgba(29,78,216,0.12);
+}
+
+
+/* Active Page */
+.nav-btn.active {
+    background: #1d4ed8; /* Soft blue */
+    border-color: #1d4ed8;
+    color: white;
+}
+
+
+/* Back Button */
+.navbar > .nav-btn {
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 
@@ -138,19 +185,6 @@ h2 {
 
 
 /* ============================
-   Footer
-   ============================ */
-
-footer {
-    text-align: center;
-    padding: 26px;
-
-    color: #dbeafe;
-    font-size: 0.95em;
-}
-
-
-/* ============================
    Project Hero Section
    ============================ */
 
@@ -191,134 +225,16 @@ footer {
     box-shadow: 0 8px 18px rgba(0,0,0,0.25);
 }
 
-/* ================= NAVBAR ================= */
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* ============================
+   Footer
+   ============================ */
 
-    padding: 15px 40px;
+footer {
+    text-align: center;
+    padding: 26px;
 
-    background: #0f172a; /* Dark blue-gray */
-    color: white;
-
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    color: #dbeafe;
+    font-size: 0.95em;
 }
-
-
-/* Link Group */
-.nav-links {
-    display: flex;
-    gap: 25px;
-}
-
-
-/* All Links */
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
-
-    padding: 6px 12px;
-    border-radius: 6px;
-
-    transition: all 0.2s ease;
-}
-
-
-/* Hover Effect */
-.navbar a:hover {
-    background: rgba(255,255,255,0.12);
-}
-
-
-/* Back Button */
-.nav-back {
-    font-weight: 600;
-    background: rgba(255,255,255,0.08);
-}
-
-.nav-back:hover {
-    background: rgba(255,255,255,0.2);
-}
-
-/* ================= NAVBAR ================= */
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 15px 0;
-
-    background: #0f172a;
-    position: relative;
-}
-
-
-/* Center Box */
-.nav-center {
-    display: flex;
-    gap: 30px;
-
-    padding: 8px 22px;
-
-    border-radius: 10px;
-
-    background: rgba(255,255,255,0.06);
-}
-
-
-/* Links */
-.nav-center a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-
-    padding: 4px 8px;
-    border-radius: 5px;
-
-    transition: background 0.2s;
-}
-
-
-/* Hover */
-.nav-center a:hover {
-    background: rgba(255,255,255,0.15);
-}
-
-
-/* Active States */
-.active-home a:first-child {
-    background: #2563eb;
-}
-
-.active-projects a:last-child {
-    background: #2563eb;
-}
-
-
-/* Back Button */
-.nav-back {
-    position: absolute;
-    left: 25px;
-
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-
-    padding: 6px 12px;
-    border-radius: 6px;
-
-    background: rgba(255,255,255,0.08);
-
-    transition: background 0.2s;
-}
-
-.nav-back:hover {
-    background: rgba(255,255,255,0.18);
-}
-
 
