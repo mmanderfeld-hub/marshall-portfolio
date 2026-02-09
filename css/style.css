@@ -244,3 +244,81 @@ footer {
     background: rgba(255,255,255,0.2);
 }
 
+/* ================= NAVBAR ================= */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px 0;
+
+    background: #0f172a;
+    position: relative;
+}
+
+
+/* Center Box */
+.nav-center {
+    display: flex;
+    gap: 30px;
+
+    padding: 8px 22px;
+
+    border-radius: 10px;
+
+    background: rgba(255,255,255,0.06);
+}
+
+
+/* Links */
+.nav-center a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+
+    padding: 4px 8px;
+    border-radius: 5px;
+
+    transition: background 0.2s;
+}
+
+
+/* Hover */
+.nav-center a:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+
+/* Active States */
+.active-home a:first-child {
+    background: #2563eb;
+}
+
+.active-projects a:last-child {
+    background: #2563eb;
+}
+
+
+/* Back Button */
+.nav-back {
+    position: absolute;
+    left: 25px;
+
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+
+    padding: 6px 12px;
+    border-radius: 6px;
+
+    background: rgba(255,255,255,0.08);
+
+    transition: background 0.2s;
+}
+
+.nav-back:hover {
+    background: rgba(255,255,255,0.18);
+}
+
+
