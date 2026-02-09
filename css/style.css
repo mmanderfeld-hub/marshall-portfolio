@@ -15,15 +15,15 @@ body {
 
 
 /* ============================
-   Navigation Bar (Final)
+   Navigation Bar (Underline Style)
    ============================ */
 
 .navbar {
     position: relative;
 
-    background-color: #020617; /* Original dark */
+    background-color: #020617;
 
-    padding: 16px 0;
+    padding: 14px 0 10px;
 
     text-align: center;
 
@@ -31,47 +31,55 @@ body {
 }
 
 
-/* Center Container */
+/* Center Links */
 .nav-center {
     display: inline-flex;
-    gap: 20px;
-
-    padding: 6px 14px;
-
-    border-radius: 8px;
+    gap: 35px;
 }
 
 
-/* All Buttons */
+/* All Links */
 .nav-btn {
-    color: #e0f2fe;
+    position: relative;
+
+    color: #e5f0ff;
     text-decoration: none;
 
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1.05em;
 
-    padding: 6px 16px;
+    padding: 6px 4px 10px;
 
-    border: 1px solid #1d4ed8; /* Thin blue outline */
-    border-radius: 6px;
-
-    background: transparent;
-
-    transition: all 0.2s ease;
+    transition: color 0.2s ease;
 }
 
 
 /* Hover */
 .nav-btn:hover {
-    background: rgba(29,78,216,0.12);
+    color: #1d2537;
 }
 
 
-/* Active Page */
+/* Active Link */
 .nav-btn.active {
-    background: #1d4ed8; /* Soft blue */
-    border-color: #1d4ed8;
-    color: white;
+    color: #1d2537;
+}
+
+
+/* Underline (Active) */
+.nav-btn.active::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+
+    width: 100%;
+    height: 3px;
+
+    background: #1d2537;
+
+    border-radius: 2px;
 }
 
 
@@ -80,161 +88,8 @@ body {
     position: absolute;
     left: 22px;
     top: 50%;
+
     transform: translateY(-50%);
-}
 
-
-/* ============================
-   Main Page Panel
-   ============================ */
-
-main {
-    max-width: 1000px;
-    margin: 50px auto;
-
-    /* Medium Light Blue */
-    background: #cfe9ff;
-
-    padding: 36px;
-    border-radius: 14px;
-
-    box-shadow: 0 12px 26px rgba(0,0,0,0.25);
-}
-
-
-/* ============================
-   Headings
-   ============================ */
-
-h1, h2, h3 {
-    color: #020617;
-}
-
-h1 {
-    font-size: 2.6em;
-}
-
-h2 {
-    margin-top: 40px;
-    border-bottom: 2px solid #7fb4e8;
     padding-bottom: 6px;
 }
-
-
-/* ============================
-   Project Grid
-   ============================ */
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 28px;
-    margin-top: 25px;
-}
-
-
-/* ============================
-   Project Cards
-   ============================ */
-
-.project {
-    border: 1px solid #9cc6ee;
-    padding: 22px;
-    border-radius: 12px;
-
-    /* Very Light Blue (Cards) */
-    background: #f0f8ff;
-
-    transition: transform 0.2s ease,
-                box-shadow 0.2s ease;
-}
-
-.project:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
-}
-
-.project p {
-    line-height: 1.45;
-}
-
-.project a {
-    font-weight: bold;
-    color: #1d4ed8;
-    text-decoration: none;
-}
-
-.project a:hover {
-    text-decoration: underline;
-}
-
-
-/* ============================
-   Project Images
-   ============================ */
-
-.project img {
-    width: 100%;
-    height: 185px;
-
-    object-fit: cover;
-
-    border-radius: 8px;
-    margin-bottom: 12px;
-}
-
-
-/* ============================
-   Project Hero Section
-   ============================ */
-
-.project-hero {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-    margin-bottom: 40px;
-}
-
-
-/* Left: Text */
-
-.project-info {
-    flex: 1.3;
-}
-
-
-/* Right: Image Container */
-
-.project-image {
-    flex: 0.7;
-    max-width: 380px;
-}
-
-
-/* Image Itself */
-
-.project-image img {
-    width: 100%;
-    height: auto;
-
-    display: block;
-    margin: 0 auto;
-
-    border-radius: 10px;
-
-    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
-}
-
-
-/* ============================
-   Footer
-   ============================ */
-
-footer {
-    text-align: center;
-    padding: 26px;
-
-    color: #dbeafe;
-    font-size: 0.95em;
-}
-
