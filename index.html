@@ -123,6 +123,48 @@
     © 2026 Marshall Manderfeld
 </footer>
 
+<!-- =========================
+     Demo Video Popup
+========================= -->
+<div id="demoModal" class="demo-modal">
+  <div class="demo-content">
+
+    <span class="close-btn" onclick="closeDemo()">&times;</span>
+
+    <video
+      id="demoVideo"
+      controls
+      autoplay
+      muted
+      playsinline
+    >
+      <source src="" type="video/mp4">
+    </video>
+
+  </div>
+</div>
+
+<script>
+function openDemo(src) {
+  const modal = document.getElementById("demoModal");
+  const video = document.getElementById("demoVideo");
+
+  video.src = src;
+  modal.style.display = "flex";
+  video.play();
+}
+
+function closeDemo() {
+  const modal = document.getElementById("demoModal");
+  const video = document.getElementById("demoVideo");
+
+  video.pause();
+  video.src = "";
+  modal.style.display = "none";
+}
+</script>
+
+    
 
 </body>
 </html>
