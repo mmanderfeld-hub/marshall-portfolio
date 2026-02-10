@@ -55,13 +55,13 @@ body {
 
 /* Hover */
 .nav-btn:hover {
-    color: #1d2537;
+    color: #cfe9ff;
 }
 
 
 /* Active Link */
 .nav-btn.active {
-    color: #1d2537;
+    color: #cfe9ff;
 }
 
 
@@ -76,7 +76,7 @@ body {
     width: 100%;
     height: 3px;
 
-    background: #1d2537;
+    background: #cfe9ff;
 
     border-radius: 2px;
 }
