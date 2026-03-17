@@ -5,12 +5,28 @@
 body {
     font-family: Inter, "Segoe UI", Arial, Helvetica, sans-serif;
     margin: 0;
-    background: linear-gradient(180deg, #0b1120 0%, #111827 100%);
+
+    /* Background image */
+    background-image: url("images/background1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
     color: #e5e7eb;
     min-height: 100vh;
     line-height: 1.6;
 }
 
+/* Dark overlay so content pops more */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    pointer-events: none;
+    z-index: -1;
+}
 
 /* ============================
    Navigation Bar
