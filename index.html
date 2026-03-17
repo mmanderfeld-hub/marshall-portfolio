@@ -1,27 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Marshall Manderfeld | Mechanical Engineering</title>
+<meta charset="UTF-8">
+<title>Marshall Manderfeld | Mechanical Engineering</title>
 
-    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
 
-<!-- ================= NAVIGATION ================= -->
+<!-- ================= PILL NAVIGATION ================= -->
 
-<nav class="navbar">
+<nav class="pill-nav-container">
+<div class="pill-nav-shell" id="pillNavShell">
+<ul class="pill-list">
 
-    <div class="nav-center">
-        <a href="index.html" class="nav-btn active">Home</a>
-        <a href="projects.html" class="nav-btn">Projects</a>
-    </div>
+<li>
+<a href="index.html" class="pill">
+<span class="hover-circle"></span>
+<span class="label-stack">
+<span class="pill-label">Home</span>
+<span class="pill-label-hover">Home</span>
+</span>
+</a>
+</li>
 
+<li>
+<a href="projects.html" class="pill">
+<span class="hover-circle"></span>
+<span class="label-stack">
+<span class="pill-label">Projects</span>
+<span class="pill-label-hover">Projects</span>
+</span>
+</a>
+</li>
+
+<li>
+<a href="resume.pdf" class="pill" target="_blank">
+<span class="hover-circle"></span>
+<span class="label-stack">
+<span class="pill-label">Resume</span>
+<span class="pill-label-hover">Resume</span>
+</span>
+</a>
+</li>
+
+<li>
+<a href="#contact" class="pill">
+<span class="hover-circle"></span>
+<span class="label-stack">
+<span class="pill-label">Contact</span>
+<span class="pill-label-hover">Contact</span>
+</span>
+</a>
+</li>
+
+</ul>
+</div>
 </nav>
-
-
 
 
 
@@ -30,86 +68,81 @@
 <main>
 
 
-<!-- ================= HERO SECTION ================= -->
-
 <section>
 
-    <h1>Marshall Manderfeld</h1>
+<h1>Marshall Manderfeld</h1>
 
-    <p style="font-size: 1.2em; margin-top: -10px;">
-        Mechanical Engineering Student
-    </p>
+<p style="font-size: 1.2em; margin-top: -10px;">
+Mechanical Engineering Student
+</p>
 
 </section>
 
 
-<!-- ================= ABOUT SECTION ================= -->
 
 <section>
 
-    <h2>About Me</h2>
+<h2>About Me</h2>
 
-    <p>
-    I am a second-year Mechanical Engineering student at the
-    South Dakota School of Mines and Technology with a strong
-    interest in hands-on, project-based learning.
-    </p>
+<p>
+I am a second-year Mechanical Engineering student at the
+South Dakota School of Mines and Technology with a strong
+interest in hands-on, project-based learning.
+</p>
 
-    <p>
-    I enjoy working on projects that combine mechanical design,
-    electronics, and software to create complete, functional
-    systems. Through academic and industry experience, I have
-    developed skills in 3D modeling, rapid prototyping, and
-    system integration.
-    </p>
+<p>
+I enjoy working on projects that combine mechanical design,
+electronics, and software to create complete, functional
+systems. Through academic and industry experience, I have
+developed skills in 3D modeling, rapid prototyping, and
+system integration.
+</p>
 
-    <p>
-    I am especially interested in finding efficient, practical
-    solutions through thoughtful design, testing, and iteration.
-    </p>
+<p>
+I am especially interested in finding efficient, practical
+solutions through thoughtful design, testing, and iteration.
+</p>
 
 </section>
 
 
-<!-- ================= HIGHLIGHTS ================= -->
 
 <section>
 
-    <h2>Highlights</h2>
+<h2>Highlights</h2>
 
-    <ul>
-        <li>Team Lead — Auto-Air Smart Fan (First Place Project)</li>
-        <li>Mechanical Engineering Intern — Wilson Trailer Company</li>
-        <li>Experience with CAD, prototyping, and embedded systems</li>
-        <li>Strong focus on practical problem solving</li>
-    </ul>
+<ul>
+<li>Team Lead — Auto-Air Smart Fan (First Place Project)</li>
+<li>Mechanical Engineering Intern — Wilson Trailer Company</li>
+<li>Experience with CAD, prototyping, and embedded systems</li>
+<li>Strong focus on practical problem solving</li>
+</ul>
 
 </section>
 
 
-<!-- ================= CALL TO ACTION ================= -->
 
 <section style="text-align: center; margin-top: 50px;">
 
-    <h2>Explore My Work</h2>
+<h2>Explore My Work</h2>
 
-    <p>
-    View my academic, personal, and internship projects below.
-    </p>
+<p>
+View my academic, personal, and internship projects below.
+</p>
 
-    <p style="margin-top: 20px;">
-        <a href="projects.html"
-           style="
-           background: #1d4ed8;
-           color: white;
-           padding: 12px 25px;
-           border-radius: 6px;
-           text-decoration: none;
-           font-weight: bold;
-           ">
-           View Projects →
-        </a>
-    </p>
+<p style="margin-top: 20px;">
+<a href="projects.html"
+style="
+background: #1d4ed8;
+color: white;
+padding: 12px 25px;
+border-radius: 6px;
+text-decoration: none;
+font-weight: bold;
+">
+View Projects →
+</a>
+</p>
 
 </section>
 
@@ -117,55 +150,191 @@
 </main>
 
 
+
 <!-- ================= FOOTER ================= -->
 
-<footer>
-    © 2026 Marshall Manderfeld
+<footer id="contact">
+© 2026 Marshall Manderfeld
 </footer>
 
-<!-- =========================
-     Demo Video Popup
-========================= -->
+
+
+<!-- ================= DEMO MODAL ================= -->
+
 <div id="demoModal" class="demo-modal">
-  <div class="demo-content">
+<div class="demo-content">
 
-    <span class="close-btn" onclick="closeDemo()">&times;</span>
+<span class="close-btn" onclick="closeDemo()">&times;</span>
 
-    <video
-      id="demoVideo"
-      controls
-      autoplay
-      muted
-      playsinline
-    >
-      <source src="" type="video/mp4">
-    </video>
+<video
+id="demoVideo"
+controls
+autoplay
+muted
+playsinline
+>
+<source src="" type="video/mp4">
+</video>
 
-  </div>
+</div>
 </div>
 
-<script>
-function openDemo(src) {
-  const modal = document.getElementById("demoModal");
-  const video = document.getElementById("demoVideo");
 
-  video.src = src;
-  modal.style.display = "flex";
-  video.play();
+
+<!-- ================= DEMO VIDEO SCRIPT ================= -->
+
+<script>
+
+function openDemo(src) {
+
+const modal = document.getElementById("demoModal");
+const video = document.getElementById("demoVideo");
+
+video.src = src;
+modal.style.display = "flex";
+video.play();
+
 }
 
 function closeDemo() {
-  const modal = document.getElementById("demoModal");
-  const video = document.getElementById("demoVideo");
 
-  video.pause();
-  video.src = "";
-  modal.style.display = "none";
+const modal = document.getElementById("demoModal");
+const video = document.getElementById("demoVideo");
+
+video.pause();
+video.src = "";
+modal.style.display = "none";
+
 }
+
 </script>
 
-    
+
+
+<!-- ================= GSAP LIBRARY ================= -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+
+
+<!-- ================= PILL NAV ANIMATION ================= -->
+
+<script>
+
+let timelines = [];
+
+function setupPills() {
+
+const pills = document.querySelectorAll(".pill");
+
+timelines = [];
+
+pills.forEach((pill, i) => {
+
+const circle = pill.querySelector(".hover-circle");
+const label = pill.querySelector(".pill-label");
+const hover = pill.querySelector(".pill-label-hover");
+
+const rect = pill.getBoundingClientRect();
+
+const w = rect.width;
+const h = rect.height;
+
+const R = (((w*w)/4)+(h*h))/(2*h);
+const D = Math.ceil(2*R)+2;
+const delta = Math.ceil(R - Math.sqrt(Math.max(0, R*R - (w*w)/4))) + 1;
+const originY = D - delta;
+
+circle.style.width = `${D}px`;
+circle.style.height = `${D}px`;
+circle.style.bottom = `-${delta}px`;
+
+gsap.set(circle,{
+xPercent:-50,
+scale:0,
+transformOrigin:`50% ${originY}px`
+});
+
+gsap.set(label,{y:0,opacity:1});
+gsap.set(hover,{y:h+10,opacity:0});
+
+const tl = gsap.timeline({paused:true});
+
+tl.to(circle,{
+scale:1.2,
+xPercent:-50,
+duration:0.55,
+ease:"power2.out"
+},0);
+
+tl.to(label,{
+y:-(h+8),
+opacity:0,
+duration:0.55,
+ease:"power2.out"
+},0);
+
+tl.to(hover,{
+y:0,
+opacity:1,
+duration:0.55,
+ease:"power2.out"
+},0);
+
+timelines[i] = tl;
+
+pill.addEventListener("mouseenter",()=>{
+
+tl.tweenTo(tl.duration(),{
+duration:0.26,
+ease:"power2.out",
+overwrite:"auto"
+});
+
+});
+
+pill.addEventListener("mouseleave",()=>{
+
+tl.tweenTo(0,{
+duration:0.18,
+ease:"power2.out",
+overwrite:"auto"
+});
+
+});
+
+});
+
+}
+
+setupPills();
+
+window.addEventListener("resize",()=>{
+
+setupPills();
+
+});
+
+const shell = document.getElementById("pillNavShell");
+
+if(shell){
+
+gsap.set(shell,{
+width:0,
+opacity:1,
+overflow:"hidden"
+});
+
+gsap.to(shell,{
+width:"auto",
+duration:0.75,
+ease:"power2.out"
+});
+
+}
+
+</script>
+
 
 </body>
 </html>
-
