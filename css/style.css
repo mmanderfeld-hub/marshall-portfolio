@@ -6,8 +6,7 @@ body {
     font-family: Inter, "Segoe UI", Arial, Helvetica, sans-serif;
     margin: 0;
 
-    /* Background image */
-    background-image: url("images/background1.jpg");
+    background-image: url("../images/background1.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -17,7 +16,6 @@ body {
     min-height: 100vh;
     line-height: 1.6;
 }
-
 
 /* ============================
    Navigation Bar
