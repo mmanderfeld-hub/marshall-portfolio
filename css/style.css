@@ -1,89 +1,100 @@
-/* ============================
-   Base Page
-   ============================ */
-
 body {
     font-family: Inter, "Segoe UI", Arial, Helvetica, sans-serif;
     margin: 0;
-
     background-image: url("../images/background1.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-
     color: #e5e7eb;
     min-height: 100vh;
     line-height: 1.6;
 }
 
-/* ============================
-   Navigation Bar
-   ============================ */
-
-.navbar {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    background: rgba(11, 17, 32, 0.82);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: 18px 0 14px;
-    text-align: center;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+.pill-nav-container {
+    position: fixed;
+    top: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
 }
 
-.nav-center {
-    display: inline-flex;
-    gap: 32px;
+.pill-nav-shell {
+    background: #ffffff;
+    border-radius: 999px;
+    padding: 4px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+    overflow: hidden;
 }
 
-.nav-btn {
+.pill-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+}
+
+.pill-list li {
+    list-style: none;
+}
+
+.pill {
     position: relative;
-    color: #cbd5e1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 46px;
+    padding: 0 26px;
+    border-radius: 999px;
+    background: #060010;
+    color: #ffffff;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 0.98rem;
-    letter-spacing: 0.01em;
-    padding: 6px 2px 12px;
-    transition: color 0.2s ease;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
-.nav-btn:hover {
-    color: #f8fafc;
+.hover-circle {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    border-radius: 50%;
+    background: #ffffff;
+    z-index: 1;
+    pointer-events: none;
+    transform: translateX(-50%) scale(0);
 }
 
-.nav-btn.active {
-    color: #f8fafc;
+.label-stack {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+    line-height: 1;
 }
 
-.nav-btn.active::after {
-    content: "";
+.pill-label,
+.pill-label-hover {
+    display: inline-block;
+    line-height: 1;
+    will-change: transform, opacity;
+}
+
+.pill-label-hover {
     position: absolute;
     left: 0;
-    bottom: -2px;
-    width: 100%;
-    height: 2px;
-    background: #93c5fd;
-    border-radius: 999px;
+    top: 0;
+    color: #000000;
+    opacity: 0;
 }
-
-.navbar > .nav-btn {
-    position: absolute;
-    left: 24px;
-    top: 50%;
-    transform: translateY(-50%);
-    padding-bottom: 6px;
-}
-
-
-/* ============================
-   Main Page Panel
-   ============================ */
 
 main {
     max-width: 1080px;
-    margin: 56px auto;
+    margin: 120px auto 56px;
     background: rgba(248, 250, 252, 0.95);
     color: #0f172a;
     padding: 48px;
@@ -92,11 +103,6 @@ main {
         0 20px 60px rgba(0,0,0,0.28),
         0 1px 0 rgba(255,255,255,0.03) inset;
 }
-
-
-/* ============================
-   Headings
-   ============================ */
 
 h1, h2, h3 {
     color: #020617;
@@ -130,105 +136,29 @@ p {
     font-size: 1rem;
 }
 
-
-/* ============================
-   Project Grid
-   ============================ */
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 24px;
-    margin-top: 28px;
+.hero-subtitle {
+    font-size: 1.2em;
+    margin-top: -10px;
 }
 
-
-/* ============================
-   Project Cards
-   ============================ */
-
-.project {
-    border: 1px solid #e2e8f0;
-    padding: 22px;
-    border-radius: 18px;
-    background: #ffffff;
-    transition:
-        transform 0.18s ease,
-        box-shadow 0.18s ease,
-        border-color 0.18s ease;
-    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+.cta-section {
+    text-align: center;
+    margin-top: 50px;
 }
 
-.project:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 14px 32px rgba(15, 23, 42, 0.10);
-    border-color: #cbd5e1;
+.cta-button-wrap {
+    margin-top: 20px;
 }
 
-.project p {
-    line-height: 1.55;
-    color: #475569;
-    margin-bottom: 0;
-}
-
-.project a {
-    font-weight: 600;
-    color: #0f172a;
+.cta-btn {
+    background: #1d4ed8;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
     text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
 }
-
-.project a:hover {
-    color: #2563eb;
-}
-
-
-/* ============================
-   Project Images
-   ============================ */
-
-.project img {
-    width: 100%;
-    height: 190px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 14px;
-    display: block;
-}
-
-
-/* ============================
-   Project Hero Section
-   ============================ */
-
-.project-hero {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-    margin-bottom: 46px;
-}
-
-.project-info {
-    flex: 1.2;
-}
-
-.project-image {
-    flex: 0.8;
-    max-width: 420px;
-}
-
-.project-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 16px;
-    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.16);
-}
-
-
-/* ============================
-   Footer
-   ============================ */
 
 footer {
     text-align: center;
@@ -237,43 +167,30 @@ footer {
     font-size: 0.95rem;
 }
 
-
-/* ============================
-   Responsive
-   ============================ */
-
 @media (max-width: 900px) {
-
     main {
-        margin: 28px 16px;
+        margin: 110px 16px 28px;
         padding: 28px 22px;
         border-radius: 18px;
     }
+}
 
-    .project-hero {
-        flex-direction: column;
-        gap: 24px;
-    }
-
-    .project-image {
-        max-width: 100%;
-    }
-
-    .nav-center {
-        gap: 18px;
-        flex-wrap: wrap;
-    }
-
-    .navbar > .nav-btn {
-        position: static;
+@media (max-width: 768px) {
+    .pill-nav-container {
+        top: 14px;
+        width: calc(100% - 24px);
+        left: 12px;
         transform: none;
-        display: inline-block;
-        margin-bottom: 8px;
     }
 
-    .navbar {
-        padding-left: 16px;
-        padding-right: 16px;
+    .pill-nav-shell {
+        width: 100%;
+        overflow-x: auto;
     }
 
+    .pill {
+        height: 42px;
+        padding: 0 18px;
+        font-size: 13px;
+    }
 }
